@@ -1,0 +1,131 @@
+/* 
+====================
+Table Of Content
+====================
+1- header desgin
+2- Module == pop up
+3- buttons & icons
+4- media query
+*/
+
+header {
+  justify-content: space-between !important;
+  padding: 1.2rem 2.2rem;
+}
+
+header i {
+  font-size: 1.1rem;
+}
+
+header .menu {
+  display: none;
+}
+
+header nav {
+  background-color: var(--bgHeader);
+  border-radius: 50px;
+  padding: .7rem 1rem;
+}
+
+header ul li a {
+  color: var(--title);
+  padding: .5rem 1rem;
+  font-size: .88rem;
+  font-weight: 500;
+}
+
+header ul li a:hover {
+  color: var(--blue);
+}
+
+header > button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgb(77, 65, 42);
+  cursor: pointer;
+  transition: .1s;
+  background-color: var(--bgHeader);
+  color: var(--title);
+}
+
+button:hover {
+  border-color: rgba(216, 146, 16, 0.589);
+}
+
+button:active {
+  transform: scale(.94);
+}
+
+/* Module == pop up */
+header .fixed {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(47, 47, 77, 0.548);
+  z-index: 100;
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+header .fixed ul.module {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--accent-color);
+  animation: scaling .5s 1;
+}
+
+
+
+header .fixed ul.module button.close {
+  position: relative;
+  top: 5px;
+  left: 98%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+
+header .fixed ul.module i.close {
+  font-size: 1.4rem;
+  color: var(--title);
+}
+
+header .fixed ul.module i.close:hover {
+  color: var(--blue);
+  transform:  rotate(180deg) scale(1.2);
+  transition: .5s;
+}
+
+header .fixed ul.module li {
+  border-bottom: 1px solid var(--border-color);
+  padding-top: .5rem;
+  padding-bottom: .8rem;
+}
+
+header .fixed ul.module li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 740px) {
+  header .menu {
+    display: inline;
+  }
+  header nav {
+    display: none;
+  }
+}
