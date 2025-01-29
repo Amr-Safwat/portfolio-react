@@ -52,6 +52,20 @@ body {
 
 }
 
+@media (max-width: 1000px) {
+  .container {
+    width: 90%;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
 .divider {
   border-bottom: 1px solid var(--border-color);
   margin: 3rem 0;
