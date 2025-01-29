@@ -10,7 +10,7 @@ Table Of Content
 
 header {
   justify-content: space-between !important;
-  padding: 1.2rem 2.2rem;
+  padding: 1.2rem 0;
 }
 
 header i {
@@ -121,7 +121,7 @@ header .fixed ul.module li:last-child {
   border-bottom: none;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 850px) {
   header .menu {
     display: inline;
   }
