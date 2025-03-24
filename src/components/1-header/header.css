@@ -63,6 +63,7 @@ header .fixed {
   inset: 0;
   background-color: rgba(47, 47, 77, 0.548);
   z-index: 100;
+  backdrop-filter: blur(5px);
 }
 
 @keyframes scaling {

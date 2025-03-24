@@ -1,0 +1,38 @@
+/*----------------------
+    Table Of Contant
+  ---------------------- 
+ 1- left section
+ 2- right section
+ */
+ 
+/*-----------------
+      left section
+  -----------------*/
+main.flex {
+  gap: 20px;
+  justify-content: flex-start;
+  color: var(--title);
+}
+
+main ul {
+
+}
+main ul li{
+  text-align: center;
+  background-color: rgba(63, 63, 70, 0.4);
+  padding: 10px 50px;
+  margin: 10px;
+  border-radius: 8px;
+  opacity: .5;
+}
+main ul li:hover {
+  opacity: 1;
+}
+main ul li.active {
+  opacity: 1;
+  border: 1px solid var(--blue);
+}
+
+ /*-----------------
+      right section
+   -----------------*/
