@@ -4,26 +4,27 @@
  1- left section
  2- right section
  */
- 
+
 /*-----------------
       left section
   -----------------*/
 main.flex {
+  align-items: start;
   gap: 20px;
   justify-content: flex-start;
   color: var(--title);
 }
 
 main ul {
-
 }
-main ul li{
+main ul li {
   text-align: center;
   background-color: rgba(63, 63, 70, 0.4);
   padding: 10px 50px;
-  margin: 10px;
+  margin: 0 10px 10px;
   border-radius: 8px;
-  opacity: .5;
+  opacity: 0.5;
+  transition: 0.3s;
 }
 main ul li:hover {
   opacity: 1;
@@ -33,6 +34,77 @@ main ul li.active {
   border: 1px solid var(--blue);
 }
 
- /*-----------------
+/*-----------------
       right section
    -----------------*/
+
+.right-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.right-section .card {
+  border: 1px solid rgba(63, 63, 70, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.right-section .card:hover {
+  border: 1px solid var(--blue);
+}
+.card img {
+  width: 100%;
+}
+.right-section .card .box {
+  padding: 10px 15px;
+}
+.right-section .card .box .title {
+  color: var(--title);
+  margin-bottom: 5px;
+}
+.right-section .card .box p {
+  color: var(--subtitle);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.right-section .card .box .links {
+  display: flex;
+  justify-content: space-between;
+}
+.right-section .card .box .links i {
+  font-size: 20px;
+}
+.right-section .card .box .links a {
+  color: var(--blue);
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .right-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+@media (max-width: 750px) {
+  main.flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main.flex ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main.flex ul li {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0 5px 10px;
+  }
+  .right-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
